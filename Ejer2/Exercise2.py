@@ -9,7 +9,7 @@ number_k_test = 8
 
 ###################
 # Training
-# K-menas right
+# K-means right
 ###################
 # Load right data. Iterate over the folder and files with "PasilloDerecha"
 # Store all points from all example in one variable
