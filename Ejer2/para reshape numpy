@@ -1,0 +1,2 @@
+a= np.reshape(data,(-1,2))
+# Es para ponerlo en 2 columnas 
