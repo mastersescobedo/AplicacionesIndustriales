@@ -47,18 +47,17 @@ if __name__ == '__main__':
         print('Failed to load image file:', img_fn)
         sys.exit(1)
 
+    fs = cv2.FileStorage("/home/sergio/PycharmProjects/AplicacionesInd/Ejer3/Test/25.reg", cv2.FILE_STORAGE_READ)
+    fn = fs.getNode("rectangles")
+    print(fn.mat())
+    aux = fn.mat()
+
+
+
     filters = build_filters()
 
     res1 = process(img, filters)
 
-    (thresh, im_bw) = cv2.threshold(img, 128, 255, cv2.THRESH_BINARY | cv2.THRESH_OTSU)
-
-
-
-
-
-
-    cv2.imshow('result', im_bw)
-    #cv2.imshow('result', img)
-    cv2.waitKey(5000)
+    cv2.imshow('result', res1)
+    cv2.waitKey(10000)
     cv2.destroyAllWindows()
